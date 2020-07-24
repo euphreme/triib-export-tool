@@ -70,3 +70,6 @@ From this point, every profile html page as been dowloaded to your computer, it'
 1. Run node index.js in the project root directory
 
 The script will extract the user's information and will create JSON files for each profile present in the member.csv file and save them in an "out" directory in the root of the project.
+
+# Specific workouts data
+The same procedure can be created to download all the workouts from Triib by resolving the data from the URL and using the security token. 
