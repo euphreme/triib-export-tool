@@ -34,21 +34,26 @@ pm.sendRequest({
 
 ## Third step
 From postman, in the created collection from second step, create and execute a new request as follow:
+
 ```GET https://[your_sub_domain].triib.com/accounts/login/```
 
 From the response tab, search in the HTML for the "csrfmiddlewaretoken" value
 
 ## Forth step
 From postman, in the created collection from second step, create and execute a new request as follow:
+
 ```POST https://[your_sub_domain].triib.com/accounts/login/```
+
 In the Body (form-data) parameters:
-username [your_username]
-password [your_password]
-csrfmiddlewaretoken [the_token]
+* username [your_username]
+* password [your_password]
+* csrfmiddlewaretoken [the_token]
 
 ## Fifth step
 From postman, in the created collection from second step, configure a new request named 'Profile' as follow:
+
 ```GET https://[your_sub_domain].triib.com/admin/members/{{id}}```
+
 Make sure to keep the last part wich is considered a "variable" for postman
 
 ## Sixth step
