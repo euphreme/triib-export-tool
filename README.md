@@ -71,5 +71,13 @@ From this point, every profile html page as been dowloaded to your computer, it'
 
 The script will extract the user's information and will create JSON files for each profile present in the member.csv file and save them in an "out" directory in the root of the project.
 
+The user's data includes:
+* name
+* email
+* gymnastic scores
+* metcons scores
+* weightlifing scores
+* workout history
+
 # Specific workouts data
 The same procedure can be created to download all the workouts from Triib by resolving the data from the URL and using the security token. 
