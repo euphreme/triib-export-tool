@@ -1,6 +1,7 @@
 # triib-export-tool
 Procedure to export members and their data from Triib Management Software
 
+# Dowloading the profiles
 ## First step
 From the members list, export all the content into a csv file and extract the id column into another csv file named "members.csv", make sure to keep the header as "id"
 
@@ -46,14 +47,21 @@ password [your_password]
 csrfmiddlewaretoken [the_token]
 
 ## Fifth step
-From postman, in the created collection from second step, configure a new request as follow:
+From postman, in the created collection from second step, configure a new request named 'Profile' as follow:
 GET https://[your_sub_domain].triib.com/admin/members/{{id}}
 Make sure to keep the last part wich is considered a "variable" for postman
 
 ## Sixth step
-Open the "Runner" section of Postman, select the collection you created from the second step and check your request from fifth step.
+Open the "Runner" section of Postman, select the collection you created from the second step and check your 'Profile' request from fifth step.
 Choose your member.csv file in the "Data" option
 Click on the "Run" button
 
 # Extracting the data
 From this point, every profile html page as been dowloaded to your computer, it's now time to do some "page scrapping"
+
+1. Place the downloaded profiles this project in a directory named 'profiles'
+1. Install [nodejs](https://nodejs.org/en/) on your computer
+1. Run npm install in the project root directory
+1. Run node index.js in the project root directory
+
+The script will extract the user's information and will create JSON files for each profile present in the member.csv file and save them in an "out" directory in the root of the project.
